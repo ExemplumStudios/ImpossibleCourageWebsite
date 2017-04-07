@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--Info and SEO-->
+        <title>Impossible Courage</title>
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <!--Loading Styles & Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Dosis:300,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <!--Loading jQuery & Plugins-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+        <script src="javascript/jquery.parallax.min.js"></script>
+        <script src="javascript/jquery-scrollto.js"></script>
+        <script src="javascript/main.js"></script>
+    </head>
+    
+    <body>
+        <div class="parallax">
+            <ul id="scene">
+                <li class="layer" data-depth=0.3><img id="parallaxImage1" src="images/refugeesBackground.png"></li>
+                <li class="layer" data-depth=0.0><img id="parallaxLogoClosed" src="graphics/logoClosed.svg"></li>
+                <li class="layer" data-depth=0.0><img id="parallaxLogoOpen" src="graphics/logoOpen.svg"></li>
+                <li class="layer" data-depth=0.2><img id="parallaxImage2" src="images/refugeesFocus.png"></li>
+                <li class="layer" data-depth=0.1><img id="parallaxImage3" src="images/refugeesForeground.png"></li>
+                <li class="layer" data-depth=0.0><b id="parallaxLogoText">Impossible Courage</b></li>
+            </ul>
+        </div>
+        
+        <div class="revealButton" id="reveal">
+            <img class="graphic" src="graphics/arrowDown.svg"/>
+        </div>
+        
+        <div class="revealButton" id="collapse">
+            <img class="graphic" src="graphics/arrowUp.svg"/>
+        </div>
+        
+        <div class="moreInfo">
+            <div class="infoBox">
+                <!--Home-->
+                <div class="description">
+                    <div class="textBox" style="font-size: 20px;"><b>Live their Stories</b></div>
+                    <div class="textBox"><p style="text-align: justify;"><b>Impossible Courage</b> is a virtual reality experience that places people into lives they otherwise may not be able to imagine. It is based on the pressing refugee crisis, people abandoning their lives to flee hardship and find asylum abroad. The story brings users through <b>the courage, sacrifices and difficult decisions</b> along an asylum seeker’s journey.</p></div>
+                    <div class="border"></div>
+                </div>
+                
+                <!--Data-->
+                <div class="data">
+                    <div class="textBox"><b>Test Results & Feedback</b></div>
+                    <div class="textBox"><p style="text-align: justify;">When starting this project, we didn't assume it would work. <b>We approached Impossible Courage like it was an experiment.</b> Displayed here are the results of trials conducted around the project, as well as post-survey results collected at every showing. <b>The results have been very promising.</b> If you filled out a survey at one of our exhibitions, thanks for your participation.</p></div>
+                    <div class="border"></div>
+                    <div class="chart">
+                        <div class="chartTitle"><b>Experience Effectiveness</b></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"Please rate your experience, based on emotional response and engagement."</p></div>
+                        <canvas id="ratingChart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <div class="chartTitle"><b>Opinion Change</b></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"How has your opinion of the refugee crisis changed?"</p></div>
+                        <canvas id="opinionChart"></canvas>
+                    </div>
+                    <div class="textBox"><p style="text-align: justify;">The above data is from a simple post-survey given after the exhibition or mobile VR experience. The conditions around the variables and the population vary siginificantly, but the data gives a good overall picture of the trials</p></div>
+                    <div class="border"></div>
+                    <div class="xButton" id="hideData"><img class="graphicInline" src="graphics/stopButton.svg"></div>
+                </div>
+                
+                <!--Navigation-->
+                <!--<div class="infoButton">
+                    <div class="textBox"><p>Read Log</p></div>
+                    <div class="logButton"><img class="graphicInline" src="graphics/logButton.svg"></div>
+                </div>-->
+                <div class="infoButton">
+                    <div class="textBox"><p>Play Trailer</p></div>
+                    <div class="trailerButton" id="play"><img class="graphicInline" src="graphics/playButton.svg"></div>
+                </div>
+                <div class="infoButton">
+                    <div class="textBox"><p>Show Data</p></div>
+                    <div class="dataButton"><img class="graphicInline" src="graphics/dataButton.svg"></div>
+                </div>
+                <div class="xButton" id="stop"><img class="graphicInline" src="graphics/stopButton.svg"></div>
+                
+                <!--Footer-->
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div class="footer"><p>Impossible Courage® is a trademark of Exemplum Studios, All Rights Reserved</p></div>
+                <div class="spacer"></div>
+            </div>
+        </div>
+        
+        <script>
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,173 @@
+/*HTML Tag Styles*/
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+b, p {
+    font-family: 'Dosis', sans-serif;
+    padding: 0;
+    margin: 0; 
+}
+b {
+    font-weight: 600
+}
+p {
+    font-weight: 300;
+}
+
+/*Class & Object Styles*/
+.parallax {
+    background-color: #000000;
+}
+#scene {
+    height: 100vh;
+    overflow: hidden;
+}
+#parallaxImage1, #parallaxImage2, #parallaxImage3 {
+    position: absolute;
+    top: -5vh;
+    left: -5vw;
+    width: 110vw;
+    height: 110vh;
+    object-fit: cover;
+}
+#parallaxLogoClosed, #parallaxLogoOpen {
+    position: absolute;
+    width: 500px;
+    left: 50vw;
+    margin-left: -250px;
+    top: 15vh;
+}
+#parallaxLogoText {
+    font-size: 65.5px;
+    color: #ffffff;
+    text-align: center;
+    width: 520px;
+    position: absolute;
+    left: 50vw;
+    margin-left: -260px;
+    padding-top: 550px;
+    top: 15vh;
+}
+.moreInfo {
+    text-align: center;
+    height: 40vh;
+}
+.infoBox {
+    width: 80vw;
+    margin: 10vh auto;
+    box-shadow: 0 0 50px 5px #e6e6e6;
+    text-align: center;
+}
+.trailerEmbed {
+    width: 80vw;
+    height: 45vw;
+}
+@media (max-height: 900px) {
+    #parallaxLogoClosed, #parallaxLogoOpen {
+        width: 300px;
+        margin-left: -150px;
+    }
+    #parallaxLogoText {
+        font-size: 39px;
+        width: 320px;
+        margin-left: -160px;
+        padding-top: 340px;
+    }
+}
+
+/*Chart Styles*/
+.chart {
+    display: inline-block;
+    width: 36vw;
+    max-height: 36vw;
+    /*background: gray;*/
+    margin: 2vh 1vw;
+    vertical-align: top;
+}
+@media (max-width: 1100px) {
+    .chart {
+        display: block;
+        width: 80%;
+        max-height: none;
+        margin: auto auto -4vh;
+    }
+}
+
+/*Text Formatting*/
+.textBox, .spacer, .footer, .border, .borderFooter {
+    padding: 2vh 0 0;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.border, .borderFooter {
+    border-bottom: 1px solid #e6e6e6;
+}
+.chartTitle {
+    text-align: left;
+    padding: 1vh 0;
+    margin: auto;
+}
+@media (max-width: 1100px) {
+    .textBox, .spacer, .footer, .border, .borderFooter {
+        width: 80%;
+    }
+}
+
+/*Buttons*/
+.revealButton {
+    /*Position*/
+    display: block;
+    position: absolute;
+    left: 46.5vw;
+    bottom: 5vh;
+    /*Design*/
+    background: #ffffff;
+    opacity: 0.5;
+    width: 5vw;
+    height: 5vw;
+    font-size: 20px;
+    padding: 1vw;
+    border-radius: 5vw;
+}
+.revealButton:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.graphic {
+    padding: 1.8vw 1.5vw;
+    width: 2vw;
+}
+.infoButton {
+    display: inline-block;
+    width: 10vw;
+    margin: auto;
+}
+.trailerButton, .dataButton, .logButton, .xButton {
+    width: 5vw;
+    height: 5vw;
+    padding: 1vw;
+    margin: 2vh auto 0;
+    border-radius: 5vw;
+    background: #f2f2f2;
+}
+.trailerButton:hover, .dataButton:hover, .logButton:hover, .xButton:hover {
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.graphicInline {
+    width: 2vw;
+    height: 2vw;
+    padding: 1.5vw;
+}
