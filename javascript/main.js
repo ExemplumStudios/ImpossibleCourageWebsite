@@ -48,7 +48,7 @@ $(document).ready(function() {
         $('.description').hide();
         $('.infoButton').hide();
         //show the following:
-        $('<iframe class="trailerEmbed" src="https://player.vimeo.com/video/211130315?autoplay=1&title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>').insertBefore('#stop');
+        $('<iframe class="trailerEmbed" style="box-shadow: 0 0 50px 5px #e6e6e6;" src="https://player.vimeo.com/video/211130315?autoplay=1&title=0&byline=0&portrait=0"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>').insertBefore('#stop');
         $('#stop').show();
         //other stuff:
         $('.infoBox').ScrollTo();

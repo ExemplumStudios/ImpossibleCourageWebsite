@@ -64,9 +64,9 @@ p {
     height: 40vh;
 }
 .infoBox {
-    width: 80vw;
-    margin: 10vh auto;
-    box-shadow: 0 0 50px 5px #e6e6e6;
+    width: 90vw;
+    margin: 6vh auto;
+    /*box-shadow: 0 0 50px 5px #e6e6e6;*/
     text-align: center;
 }
 .trailerEmbed {
