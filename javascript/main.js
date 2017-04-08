@@ -80,12 +80,24 @@ $(document).ready(function() {
         $('.infoButton').show();
     });
     
-    //data
+    //load data
+    $.ajax({
+        url: "data/output.csv",
+        async: false,
+        success: function (csvd) {
+            output = $.csv.toArrays(csvd);
+        },
+        dataType: "text",
+        complete: function () {}
+    });
+    output[0].shift();
+    output[1].shift();
     var ratingData = {
         labels: ['Very Ineffective', 'Ineffective', 'Semi-Effective', 'Effective', 'Very Effective'],
         datasets: [
             {
-            data: [0, 0, 22, 61, 17],
+            //data: [0, 0, 22, 61, 17],
+            data: output[0],
             backgroundColor: ['#E3F2FD', '#90CAF9', '#42A5F5', '#1E88E5', '#1565C0'],
             }
         ]   
@@ -94,7 +106,8 @@ $(document).ready(function() {
         labels: ['No Change', 'Slight Change', 'Little Change', 'Some Change', 'Large Change'],
         datasets: [
             {
-            data: [4, 17, 30, 39, 9],
+            //data: [4, 17, 30, 39, 9],
+            data: output[1],
             backgroundColor: ['#FFE0B2', '#FFB74D', '#FF9800', '#F57C00', '#ef661c'],
             }
         ]   
