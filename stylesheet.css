@@ -151,7 +151,8 @@ p {
 }
 .infoButton {
     display: inline-block;
-    width: 10vw;
+    min-width: 100px;
+    width: 15vw;
     margin: auto;
 }
 .trailerButton, .dataButton, .logButton, .xButton {

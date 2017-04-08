@@ -65,7 +65,7 @@ $(document).ready(function() {
     //data Hide/Show
     $('.dataButton').click(function () {
         //hide the following
-        $('.description').hide();
+        //$('.description').hide();
         $('.infoButton').hide();
         //show the following
         $('.data').show();
@@ -76,7 +76,7 @@ $(document).ready(function() {
         //hide the following
         $('.data').hide();
         //show the following
-        $('.description').show();
+        //$('.description').show();
         $('.infoButton').show();
     });
     
