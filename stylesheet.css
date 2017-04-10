@@ -65,7 +65,7 @@ p {
 }
 .infoBox {
     width: 90vw;
-    margin: 6vh auto;
+    margin: 6vh auto 0;
     /*box-shadow: 0 0 50px 5px #e6e6e6;*/
     text-align: center;
 }
