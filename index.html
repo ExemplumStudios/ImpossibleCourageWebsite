@@ -15,6 +15,7 @@
         <script src="javascript/jquery.csv.min.js"></script>
         <script src="javascript/jquery.parallax.min.js"></script>
         <script src="javascript/jquery-scrollto.js"></script>
+        <script src="javascript/wordcloud2.js"></script>
         <script src="javascript/main.js"></script>
     </head>
     
@@ -51,15 +52,16 @@
                 <div class="data">
                     <div class="textBox" style="text-align: justify;"><b>Test Results & Feedback</b></div>
                     <div class="textBox" style="text-align: justify;"><p>When starting this project, we didn't assume it would work. <b>We approached Impossible Courage like it was an experiment.</b> Displayed here are the results of trials conducted around the project, as well as post-survey results collected at every showing. <b>The results have been very promising.</b> If you filled out a survey at one of our exhibitions, thanks for your participation.</p></div>
+                    <div class="border"></div>
                     <div class="spacer"></div>
                     <div class="chart">
                         <div class="chartTitle"><b>Experience Effectiveness</b></div>
-                        <div class="chartTitle"><p style="text-align: justify;">"Please rate your experience, based on emotional response and engagement."</p></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"Please rate your experience, based on  emotional response." (n=<b class="sampleSize" style="font-weight: 300;"></b>)</p></div>
                         <canvas id="ratingChart"></canvas>
                     </div>
                     <div class="chart">
                         <div class="chartTitle"><b>Opinion Change</b></div>
-                        <div class="chartTitle"><p style="text-align: justify;">"How has your opinion of the refugee crisis changed?"</p></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"How has your opinion of the refugee crisis changed?" (n=<b class="sampleSize" style="font-weight: 300;"></b>)</div>
                         <canvas id="opinionChart"></canvas>
                     </div>
                     <div class="textBox"><p style="text-align: justify;">The above data is from a simple post-survey given after the exhibition or mobile VR experience. The conditions around the variables and the population vary siginificantly, but the data gives a good overall picture of the trials</p></div>

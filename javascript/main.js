@@ -80,9 +80,9 @@ $(document).ready(function() {
         $('.infoButton').show();
     });
     
-    //load data
+    //load shortSurvey data
     $.ajax({
-        url: "data/output.csv",
+        url: "data/shortSurvey.csv",
         async: false,
         success: function (csvd) {
             output = $.csv.toArrays(csvd);
@@ -92,6 +92,7 @@ $(document).ready(function() {
     });
     output[0].shift();
     output[1].shift();
+    //document.write(output[2][1]);
     var ratingData = {
         labels: ['Very Ineffective', 'Ineffective', 'Semi-Effective', 'Effective', 'Very Effective'],
         datasets: [
@@ -112,6 +113,8 @@ $(document).ready(function() {
             }
         ]   
     }
+    var sampleSize = output[2][1];
+    $('.sampleSize').text(sampleSize);
     //charts formatting
     Chart.defaults.global.defaultFontFamily = 'Dosis';
     Chart.defaults.global.defaultFontSize = 15;
