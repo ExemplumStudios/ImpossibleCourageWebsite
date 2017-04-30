@@ -133,6 +133,8 @@ $(document).ready(function() {
                 data: sceneReactions[1],
                 pointBorderColor: '#1565C0',
                 pointBackgroundColor: '#1565C0',
+                fill: true,
+                backgroundColor: '#E3F2FD',
             }]
     }
     var impact = {
@@ -247,7 +249,7 @@ $(document).ready(function() {
         color: function (word, weight) {
             return weight >= 10 ? '#D43229' : '#FF8A81';
         },
-        weightFactor: 20,
+        weightFactor: 15,
         //Spacing
         gridSize: 20,
         rotationSteps: 2,
@@ -260,7 +262,7 @@ $(document).ready(function() {
         color: function (word, weight) {
             return weight >= 10 ? '#1565C0' : '#90CAF9';
         },
-        weightFactor: 20,
+        weightFactor: 15,
         //Spacing
         gridSize: 20,
         rotationSteps: 2,
