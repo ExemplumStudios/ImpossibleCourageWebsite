@@ -66,17 +66,31 @@
                     </div>
                     <div class="textBox"><p style="text-align: justify;">The above data is from a <b>simple survey</b> given after the exhibition or mobile VR experience. The conditions around the variables and the population vary siginificantly, but the data gives a good overall picture of the trials</p></div>
                     <div class="border"></div>
-                    <div class="textBox"><p style="text-align: justify;">The data below is from <b>a behavioral study</b> done with a prototype of the Impossible Courage experience. Participants were given a pre and post survey, and sensor data was logged while they were in the VR headset. We evaluated changes in opinion and the impact of different scenes using a qualitative content analysis, and used likert scales to measure motion sickness.</p></div>
+                    <div class="textBox"><p style="text-align: justify;">The data below is from <b>a behavioral study</b> done with a prototype of the Impossible Courage experience. Participants were given a pre and post survey, and sensor data was logged while they were in the VR headset. We evaluated changes in opinion using a qualitative content analysis. Motion sickness was measured on a 1 to 5 scale, each scene rated by a participant. The scenes were rated against each other for impact, with participants selecting from a list.</p></div>
                     <div class="chart">
                         <div class="chartTitle"><b>Before</b></div>
-                        <div class="chartTitle"><p style="text-align: justify;">"What is your opinion of the current migration situation?"</div>
-                        <canvas id="opinionChart"></canvas>
+                        <div class="chartTitle"><p style="text-align: justify;">"What is your opinion of the current migration situation?" (n=15)</div>
+                        <canvas id="preCloud" width="900" height="500"></canvas>
                     </div>
                     <div class="chart">
                         <div class="chartTitle"><b>After</b></div>
-                        <div class="chartTitle"><p style="text-align: justify;">"What is your opinion of the current migration situation?"</div>
-                        <canvas id="opinionChart"></canvas>
+                        <div class="chartTitle"><p style="text-align: justify;">"What is your opinion of the current migration situation?" (n=15)</div>
+                        <canvas id="postCloud" width="900" height="500"></canvas>
                     </div>
+                    <div class="chart">
+                        <div class="chartTitle"><b>Motion Sickness</b></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"How motion sick did you feel on each scene?" (n=15)</div>
+                        <canvas id="motionSicknessChart"></canvas>
+                        <div class="chartTitle"><p style="text-align: justify;">Each scene rated on a scale from 1 to 5.</div>
+                    </div>
+                    <div class="chart">
+                        <div class="chartTitle"><b>Scene Impact</b></div>
+                        <div class="chartTitle"><p style="text-align: justify;">"What scenes were most impactful?" (n=15)</div>
+                        <canvas id="impactChart"></canvas>
+                        <div class="chartTitle"><p style="text-align: justify;">Total frequency of selection for each scene.</div>
+                    </div>
+                    <div class="textBox"><p style="text-align: justify;">This study was completed with the linear, animated, 3D 360 experience on a Google Cardboard headset. The results shown here were used to help design the final version of Impossible Courage, for the HTC Vive. Thank you for taking the time to read these, and stay tuned for results from the final version.</p></div>
+                    <div class="border"></div>
                     <div class="xButton" id="hideData"><img class="graphicInline" src="graphics/stopButton.svg"></div>
                 </div>
                 

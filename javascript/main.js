@@ -85,20 +85,19 @@ $(document).ready(function() {
         url: "data/shortSurvey.csv",
         async: false,
         success: function (csvd) {
-            output = $.csv.toArrays(csvd);
+            shortSurvey = $.csv.toArrays(csvd);
         },
         dataType: "text",
         complete: function () {}
     });
-    output[0].shift();
-    output[1].shift();
-    //document.write(output[2][1]);
+    shortSurvey[0].shift();
+    shortSurvey[1].shift();
     var ratingData = {
         labels: ['Very Ineffective', 'Ineffective', 'Semi-Effective', 'Effective', 'Very Effective'],
         datasets: [
             {
             //data: [0, 0, 22, 61, 17],
-            data: output[0],
+            data: shortSurvey[0],
             backgroundColor: ['#E3F2FD', '#90CAF9', '#42A5F5', '#1E88E5', '#1565C0'],
             }
         ]   
@@ -108,13 +107,45 @@ $(document).ready(function() {
         datasets: [
             {
             //data: [4, 17, 30, 39, 9],
-            data: output[1],
+            data: shortSurvey[1],
             backgroundColor: ['#FFE0B2', '#FFB74D', '#FF9800', '#F57C00', '#ef661c'],
             }
         ]   
     }
-    var sampleSize = output[2][1];
+    var sampleSize = shortSurvey[2][1];
     $('.sampleSize').text(sampleSize);
+    //load sceneReactions data
+    $.ajax({
+        url: "data/sceneReactions.csv",
+        async: false,
+        success: function (csvd) {
+            sceneReactions = $.csv.toArrays(csvd);
+        },
+        dataType: "text",
+        complete: function () {}
+    });
+    var motionSickness = {
+        labels: sceneReactions[0],
+        datasets: [
+            {
+                borderColor: '#1E88E5',
+                fill: false,
+                data: sceneReactions[1],
+                pointBorderColor: '#1565C0',
+                pointBackgroundColor: '#1565C0',
+            }]
+    }
+    var impact = {
+        labels: sceneReactions[0],
+        datasets: [
+            {
+                data: sceneReactions[2],
+                backgroundColor: '#FFE0B2',
+                borderColor: '#ef661c',
+                borderWidth: 2,
+            }
+        ]
+    }
     //charts formatting
     Chart.defaults.global.defaultFontFamily = 'Dosis';
     Chart.defaults.global.defaultFontSize = 15;
@@ -147,6 +178,91 @@ $(document).ready(function() {
                 position: 'left',
             },
         },
+    });
+    var motionSicknessChart = new Chart($('#motionSicknessChart'), {
+        type: 'line',
+        data: motionSickness,
+        options: {
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 5,
+                    },
+                }],
+                xAxes: [{
+                    display: false,
+                }],
+            },
+        }
+    });
+    var impactChart = new Chart($('#impactChart'), {
+        type: 'bar',
+        data: impact,
+        options: {
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        display: true, 
+                    },
+                    ticks: {
+                        suggestedMax: 15,
+                    },
+                }],
+                xAxes: [{
+                    display: false,
+                }]
+            }
+        }
+    });
+    //Word Clouds
+    $.ajax({
+        url: "data/preList.csv",
+        async: false,
+        success: function (csvd) {
+            preList = $.csv.toArrays(csvd);
+        },
+        dataType: "text",
+        complete: function () {}
+    });
+    $.ajax({
+        url: "data/postList.csv",
+        async: false,
+        success: function (csvd) {
+            postList = $.csv.toArrays(csvd);
+        },
+        dataType: "text",
+        complete: function () {}
+    });
+    //document.write(preList[0]);
+    WordCloud($("#preCloud")[0], {
+        list: preList,
+        //Styling
+        fontFamily: 'Dosis',
+        color: function (word, weight) {
+            return weight >= 10 ? '#ef661c' : '#FF9800';
+        },
+        weightFactor: 20,
+        //Spacing
+        gridSize: 20,
+        rotationSteps: 2,
+    });
+    WordCloud($("#postCloud")[0], {
+        list: postList,
+        //Styling
+        fontFamily: 'Dosis',
+        color: function (word, weight) {
+            return weight >= 10 ? '#1565C0' : '#90CAF9';
+        },
+        weightFactor: 20,
+        //Spacing
+        gridSize: 20,
+        rotationSteps: 2,
     });
     
 });
