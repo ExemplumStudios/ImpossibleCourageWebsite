@@ -251,6 +251,7 @@ $(document).ready(function() {
         //Spacing
         gridSize: 20,
         rotationSteps: 2,
+        shuffle: true,
     });
     WordCloud($("#postCloud")[0], {
         list: postList,
@@ -263,6 +264,7 @@ $(document).ready(function() {
         //Spacing
         gridSize: 20,
         rotationSteps: 2,
+        shuffle: true,
     });
     
 });
