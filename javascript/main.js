@@ -108,7 +108,7 @@ $(document).ready(function() {
             {
             //data: [4, 17, 30, 39, 9],
             data: shortSurvey[1],
-            backgroundColor: ['#FFE0B2', '#FFB74D', '#FF9800', '#F57C00', '#ef661c'],
+            backgroundColor: ['#FF8A81', '#D43229', '#BF0D00', '#940300', '#7F030F'],
             }
         ]   
     }
@@ -140,9 +140,9 @@ $(document).ready(function() {
         datasets: [
             {
                 data: sceneReactions[2],
-                backgroundColor: '#FFE0B2',
-                borderColor: '#ef661c',
-                borderWidth: 2,
+                backgroundColor: '#FF8A81',
+                borderColor: '#7F030F',
+                borderWidth: 1.5,
             }
         ]
     }
@@ -245,7 +245,7 @@ $(document).ready(function() {
         //Styling
         fontFamily: 'Dosis',
         color: function (word, weight) {
-            return weight >= 10 ? '#ef661c' : '#FF9800';
+            return weight >= 10 ? '#D43229' : '#FF8A81';
         },
         weightFactor: 20,
         //Spacing
