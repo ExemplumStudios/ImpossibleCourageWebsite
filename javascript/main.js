@@ -268,5 +268,4 @@ $(document).ready(function() {
         rotationSteps: 2,
         shuffle: true,
     });
-    
 });

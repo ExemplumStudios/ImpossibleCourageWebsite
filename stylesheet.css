@@ -13,10 +13,11 @@ ul, li {
     padding: 0;
     margin: 0;
 }
-b, p {
+b, p, h1, a {
     font-family: 'Dosis', sans-serif;
     padding: 0;
-    margin: 0; 
+    margin: 0;
+    color: #000000;
 }
 b {
     font-weight: 600
@@ -72,6 +73,24 @@ p {
 .trailerEmbed {
     width: 80vw;
     height: 45vw;
+}
+.splash {
+    width: 80vw;
+    height: auto;
+    margin: -40vh -40vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    text-align: center;
+    box-shadow: 0 0 50px 5px #e6e6e6;
+    text-align: center;
+}
+#splashImage {
+    width: 100%;
+    height: 55vh;
+    background-image: url(eventBanners/banner1.png);
+    background-size: cover;
+    background-position: center;
 }
 @media (max-height: 900px) {
     #parallaxLogoClosed, #parallaxLogoOpen {
@@ -187,4 +206,15 @@ p {
     width: 2vw;
     height: 2vw;
     padding: 1.5vw;
+}
+.enterSite{
+    display: inline-block;
+    height 1vh;
+    max-width: 15vw;
+    padding: 2vh;
+    background: #f2f2f2;
+}
+.enterSite:hover{
+    background: #e6e6e6;
+    cursor: pointer;
 }
