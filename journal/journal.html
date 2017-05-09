@@ -12,17 +12,18 @@
         <!--Loading jQuery & Plugins-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
-        <script src="javascript/jquery.csv.min.js"></script>
-        <script src="javascript/jquery.parallax.min.js"></script>
-        <script src="javascript/jquery-scrollto.js"></script>
-        <script src="javascript/wordcloud2.js"></script>
+        <script src="/javascript/jquery.csv.min.js"></script>
+        <script src="/javascript/jquery.parallax.min.js"></script>
+        <script src="/javascript/jquery-scrollto.js"></script>
+        <script src="/javascript/wordcloud2.js"></script>
         <script src="journal.js"></script>
     </head>
     
     <body>
         <div class="journal">
-            <div id="lastPageHitbox"><img class="pageButton" id="lastPage" src="lastPage.svg"></div>
-            <div id="nextPageHitbox"><img class="pageButton" id="nextPage" src="nextPage.svg"></div>
+            <div class="hitbox" id="lastPageHitbox"><img class="pageButton" id="lastPage" src="lastPage.svg"></div>
+            <div class="hitbox" id="nextPageHitbox"><img class="pageButton" id="nextPage" src="nextPage.svg"></div>
         </div>
+        <div id="progressBar"></div>
     </body>
 </html>
