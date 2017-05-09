@@ -1,18 +1,14 @@
 $(document).ready(function () {
     
-    $('.journal').ready(function () {
-        $('.pageButton').ready(function () {
-            $('.pageButton').fadeIn(200).delay(3000).fadeOut(500);
-
-            $('#lastPage, #nextPage').mouseenter(function() {
-                $('.pageButton').stop().stop().show();
-            });
-
-            $('#lastPage, #nextPage').mouseleave(function() {
-                $('.pageButton').delay(3000).fadeOut(500);
-            })
-        });
-    });
-
+    $('.pageButton').fadeIn(1000);
     
+    var isHovering = $('.pageButton').mouseenter(function () {
+        console.log('yay');
+        return true;
+    });
+        
+    var isHovering = $('.pageButton').mouseleave(function () {
+        console.log('nay');
+        return false;
+    });
 });
