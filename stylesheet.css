@@ -135,7 +135,7 @@ p {
     }
 }
 
-/*Text Formatting*/
+/*Text Layout*/
 .textBox, .spacer, .footer, .border, .borderFooter {
     padding: 2vh 0 0;
     text-align: center;
