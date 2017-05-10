@@ -28,6 +28,11 @@ p {
 #logText p {
     margin-bottom: 1em;
 }
+#logText b {
+    color: #6d6d6d;
+    font-weight: 300;
+}
+
 
 /*Class & Object Styles*/
 .parallax {
@@ -282,5 +287,21 @@ p {
         height: 8vh;
         width: 8vh;
         border-radius: 4vh;
+    }
+    .trailerButton, .dataButton, .logButton, .xButton {
+        width: 8vh;
+        height: 8vh;
+        padding: 0;
+        margin: 2vh auto 0;
+        border-radius: 8vh;
+        background: #f2f2f2;
+    }
+    .graphicInline {
+        width: 4vh;
+        height: 4vh;
+        padding: 2vh;
+    }
+    .infoButton {
+        width: 24vw
     }
 }

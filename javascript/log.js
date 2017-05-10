@@ -1,11 +1,11 @@
 $(document).ready(function () {
     
-    var totalLogs = 3;
-    var currentLog = totalLogs;
+    var totalLogs = 22;
+    var currentLog = 1;
     var progressPercent = 0;
     
     //starting states for elements
-    $('#logText').load('/logs/log'+currentLog+'.txt');
+    $('#logText').load('/logs/log1.txt');
     $('#progressBar').width(progressBar());
     
     //navigation buttons appearing and fading
@@ -31,7 +31,7 @@ $(document).ready(function () {
         $('#logText').load('/logs/log'+currentLog+'.txt');
     });
     $('#nextPage').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
     });
     $('#nextPage').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
@@ -41,7 +41,7 @@ $(document).ready(function () {
         if (currentLog > 1) {
             currentLog = currentLog - i;
         } else {
-            currentLog;
+            currentLog = totalLogs;
         };
         console.log(currentLog);
     }
@@ -54,7 +54,7 @@ $(document).ready(function () {
         $('#logText').load('/logs/log'+currentLog+'.txt');
     });
     $('#nextPageExtreme').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
     });
     $('#nextPageExtreme').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
@@ -64,7 +64,7 @@ $(document).ready(function () {
         if (currentLog > 1) {
             currentLog = 1;
         } else {
-            currentLog;
+            currentLog = totalLogs;
         };
         console.log(currentLog);
     }
@@ -77,7 +77,7 @@ $(document).ready(function () {
         $('#logText').load('/logs/log'+currentLog+'.txt');
     });
     $('#lastPage').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
     });
     $('#lastPage').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
@@ -87,7 +87,7 @@ $(document).ready(function () {
         if (currentLog < totalLogs) {
             currentLog = currentLog + i;
         } else {
-            currentLog;
+            currentLog = 1;
         };
         console.log(currentLog);
     }
@@ -100,7 +100,7 @@ $(document).ready(function () {
         $('#logText').load('/logs/log'+currentLog+'.txt');
     });
     $('#lastPageExtreme').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
     });
     $('#lastPageExtreme').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
@@ -110,7 +110,7 @@ $(document).ready(function () {
         if (currentLog < totalLogs) {
             currentLog = totalLogs;
         } else {
-            currentLog;
+            currentLog = 1;
         };
         console.log(currentLog);
     }
