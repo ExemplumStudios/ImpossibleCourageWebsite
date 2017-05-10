@@ -46,6 +46,29 @@ $(document).ready(function () {
         console.log(currentLog);
     }
     
+    $('#nextPageExtreme').click(function () {
+        nextLogExtreme();
+        console.log(progressBar());
+        
+        $('#progressBar').width(progressBar());
+        $('#logText').load('/logs/log'+currentLog+'.txt');
+    });
+    $('#nextPageExtreme').mousedown(function () {
+        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+    });
+    $('#nextPageExtreme').mouseup(function () {
+        $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
+    });
+    
+    function nextLogExtreme() {
+        if (currentLog > 1) {
+            currentLog = 1;
+        } else {
+            currentLog;
+        };
+        console.log(currentLog);
+    }
+    
     $('#lastPage').click(function () {
         lastLog(1);
         console.log(progressBar());
@@ -63,6 +86,29 @@ $(document).ready(function () {
     function lastLog(i) {
         if (currentLog < totalLogs) {
             currentLog = currentLog + i;
+        } else {
+            currentLog;
+        };
+        console.log(currentLog);
+    }
+    
+    $('#lastPageExtreme').click(function () {
+        lastLogExtreme();
+        console.log(progressBar());
+        
+        $('#progressBar').width(progressBar());
+        $('#logText').load('/logs/log'+currentLog+'.txt');
+    });
+    $('#lastPageExtreme').mousedown(function () {
+        $(this).css('box-shadow' , '0 0 50px -10px #e6e6e6');
+    });
+    $('#lastPageExtreme').mouseup(function () {
+        $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
+    });
+    
+    function lastLogExtreme() {
+        if (currentLog < totalLogs) {
+            currentLog = totalLogs;
         } else {
             currentLog;
         };

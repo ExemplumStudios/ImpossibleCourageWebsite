@@ -263,19 +263,24 @@ p {
     text-align: right;
 }
 .pageButton {
-    height: 5vh;
-    width: 5vh;
-    border-radius: 5vh;
+    position: relative;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 4vw;
+    box-shadow: 0 0 50px 5px #e6e6e6;
 }
 .pageButton:hover {
     cursor: pointer;
 }
 #nextPage, #lastPage {
-    box-shadow: 0 0 50px 5px #e6e6e6;
+    position: relative;
+    margin: 0 1vw;
+    z-index: 1;
 }
 @media (max-width: 1100px) {
     .pageButton {
-        height: 10vh;
-        width: 10vh;
+        height: 8vh;
+        width: 8vh;
+        border-radius: 4vh;
     }
 }
