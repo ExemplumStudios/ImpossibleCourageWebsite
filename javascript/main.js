@@ -8,6 +8,7 @@ $(document).ready(function() {
     $('#parallaxLogoOpen').hide();
     $('#stop').hide();
     $('.data').hide();
+    $('.log').hide();
     
     //Load Animation
     $('body').fadeIn(1000);
@@ -37,6 +38,7 @@ $(document).ready(function() {
         //Stop trailer if playing:
         $('#stop').hide();
         $('.data').hide();
+        $('.log').hide();
         $('.trailerEmbed').remove();
         $('.infoButton').show();
         $('.description').show();
@@ -75,6 +77,24 @@ $(document).ready(function() {
     $('#hideData').click(function () {
         //hide the following
         $('.data').hide();
+        //show the following
+        //$('.description').show();
+        $('.infoButton').show();
+    });
+    
+    //log Hide/Show
+    $('.logButton').click(function () {
+        //hide the following
+        //$('.description').hide();
+        $('.infoButton').hide();
+        //show the following
+        $('.log').show();
+        //other stuff:
+        $('.infoBox').ScrollTo();
+    });
+    $('#hideLog').click(function () {
+        //hide the following
+        $('.log').hide();
         //show the following
         //$('.description').show();
         $('.infoButton').show();
@@ -251,21 +271,19 @@ $(document).ready(function() {
         },
         weightFactor: 15,
         //Spacing
-        gridSize: 20,
+        gridSize: 10,
         rotationSteps: 2,
-        shuffle: true,
     });
     WordCloud($("#postCloud")[0], {
         list: postList,
         //Styling
         fontFamily: 'Dosis',
         color: function (word, weight) {
-            return weight >= 10 ? '#1565C0' : '#90CAF9';
+            return weight >= 9 ? '#1565C0' : '#90CAF9';
         },
         weightFactor: 15,
         //Spacing
-        gridSize: 20,
+        gridSize: 10,
         rotationSteps: 2,
-        shuffle: true,
     });
 });

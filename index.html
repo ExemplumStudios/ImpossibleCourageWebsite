@@ -17,6 +17,7 @@
         <script src="javascript/jquery-scrollto.js"></script>
         <script src="javascript/wordcloud2.js"></script>
         <script src="javascript/main.js"></script>
+        <script src="javascript/log.js"></script>
     </head>
     
     <body>
@@ -94,11 +95,19 @@
                     <div class="xButton" id="hideData"><img class="graphicInline" src="graphics/stopButton.svg"></div>
                 </div>
                 
+                <div class="log">
+                    <div class="textBox" style="text-align: justify;"><b>Development Log</b></div>
+                    <div class="spacer"></div>
+                    <div id="logContainer">
+                        <div id="logText"></div>
+                        <div id="progressBarFill"><div id="progressBar"></div></div>
+                        <div class="hitbox" id="hitboxLastPage"><img class="pageButton" id="lastPage" src="graphics/lastPage.svg"></div>
+                        <div class="hitbox" id="hitboxNextPage"><img class="pageButton" id="nextPage" src="graphics/nextPage.svg"></div>
+                    </div>
+                    <div class="xButton" id="hideLog"><img class="graphicInline" src="graphics/stopButton.svg"></div>
+                </div>
+                
                 <!--Navigation-->
-                <!--<div class="infoButton">
-                    <div class="textBox"><p>Read Log</p></div>
-                    <div class="logButton"><img class="graphicInline" src="graphics/logButton.svg"></div>
-                </div>-->
                 <div class="infoButton">
                     <div class="textBox"><p>Play Trailer</p></div>
                     <div class="trailerButton" id="play"><img class="graphicInline" src="graphics/playButton.svg"></div>
@@ -106,6 +115,10 @@
                 <div class="infoButton">
                     <div class="textBox"><p>Show Results</p></div>
                     <div class="dataButton"><img class="graphicInline" src="graphics/dataButton.svg"></div>
+                </div>
+                <div class="infoButton">
+                    <div class="textBox"><p>Read Log</p></div>
+                    <div class="logButton"><img class="graphicInline" src="graphics/logButton.svg"></div>
                 </div>
                 <div class="xButton" id="stop"><img class="graphicInline" src="graphics/stopButton.svg"></div>
                 
