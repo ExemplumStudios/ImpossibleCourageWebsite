@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
-    var totalLogs = 10;
-    var currentLog = 1;
+    var totalLogs = 3;
+    var currentLog = totalLogs;
     var progressPercent = 0;
     
     //starting states for elements
@@ -19,7 +19,7 @@ $(document).ready(function () {
     
     //turning pages in the logs
     function progressBar() {
-        progressPercent = currentLog/totalLogs*100;
+        progressPercent = 100-(currentLog-1)/totalLogs*100;
         return String(progressPercent + '%');
     };
     
@@ -38,8 +38,8 @@ $(document).ready(function () {
     });
     
     function nextLog(i) {
-        if (currentLog < totalLogs) {
-            currentLog = currentLog + i;
+        if (currentLog > 1) {
+            currentLog = currentLog - i;
         } else {
             currentLog;
         };
@@ -61,8 +61,8 @@ $(document).ready(function () {
     });
     
     function lastLog(i) {
-        if (currentLog > 1) {
-            currentLog = currentLog - i;
+        if (currentLog < totalLogs) {
+            currentLog = currentLog + i;
         } else {
             currentLog;
         };
