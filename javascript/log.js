@@ -1,13 +1,19 @@
 $(document).ready(function () {
-    
+
     var totalLogs = 22;
     var currentLog = 1;
     var progressPercent = 0;
-    
+
     //starting states for elements
-    $('#logText').load('/logs/log1.txt');
+    $.get('/logs/log1.md', function (data) {
+        var converter = new showdown.Converter(),
+            text = data,
+            html = converter.makeHtml(text);
+
+        $('#logText').html(html);
+    });
     $('#progressBar').width(progressBar());
-    
+
     //navigation buttons appearing and fading
     /*$('.pageButton').fadeIn(1000).delay(5000).fadeOut(500);
     $('.hitbox').mouseenter(function () {
@@ -16,27 +22,36 @@ $(document).ready(function () {
     $('.hitbox').mouseleave(function () {
         $('.pageButton').stop(true).fadeOut(100);
     });*/
-    
+
     //turning pages in the logs
     function progressBar() {
-        progressPercent = 100-(currentLog-1)/totalLogs*100;
+        progressPercent = 100 - (currentLog - 1) / totalLogs * 100;
         return String(progressPercent + '%');
     };
-    
+
+    function loadCurrentLog(i) {
+        $.get('/logs/log' + i + '.md', function (data) {
+            var converter = new showdown.Converter(),
+                text = data,
+                html = converter.makeHtml(text);
+            $('#logText').html(html);
+        });
+    };
+
     $('#nextPage').click(function () {
         nextLog(1);
         console.log(progressBar());
-        
+
         $('#progressBar').width(progressBar());
-        $('#logText').load('/logs/log'+currentLog+'.txt');
+        loadCurrentLog(currentLog);
     });
     $('#nextPage').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
+        $(this).css('box-shadow', '0 0 50px 0px #e6e6e6');
     });
     $('#nextPage').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
     });
-    
+
     function nextLog(i) {
         if (currentLog > 1) {
             currentLog = currentLog - i;
@@ -45,21 +60,20 @@ $(document).ready(function () {
         };
         console.log(currentLog);
     }
-    
+
     $('#nextPageExtreme').click(function () {
         nextLogExtreme();
         console.log(progressBar());
-        
         $('#progressBar').width(progressBar());
-        $('#logText').load('/logs/log'+currentLog+'.txt');
+        loadCurrentLog(currentLog);
     });
     $('#nextPageExtreme').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
+        $(this).css('box-shadow', '0 0 50px 0px #e6e6e6');
     });
     $('#nextPageExtreme').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
     });
-    
+
     function nextLogExtreme() {
         if (currentLog > 1) {
             currentLog = 1;
@@ -68,21 +82,20 @@ $(document).ready(function () {
         };
         console.log(currentLog);
     }
-    
+
     $('#lastPage').click(function () {
         lastLog(1);
         console.log(progressBar());
-        
         $('#progressBar').width(progressBar());
-        $('#logText').load('/logs/log'+currentLog+'.txt');
+        loadCurrentLog(currentLog);
     });
     $('#lastPage').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
+        $(this).css('box-shadow', '0 0 50px 0px #e6e6e6');
     });
     $('#lastPage').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
     });
-    
+
     function lastLog(i) {
         if (currentLog < totalLogs) {
             currentLog = currentLog + i;
@@ -91,21 +104,20 @@ $(document).ready(function () {
         };
         console.log(currentLog);
     }
-    
+
     $('#lastPageExtreme').click(function () {
         lastLogExtreme();
         console.log(progressBar());
-        
         $('#progressBar').width(progressBar());
-        $('#logText').load('/logs/log'+currentLog+'.txt');
+        loadCurrentLog(currentLog);
     });
     $('#lastPageExtreme').mousedown(function () {
-        $(this).css('box-shadow' , '0 0 50px 0px #e6e6e6');
+        $(this).css('box-shadow', '0 0 50px 0px #e6e6e6');
     });
     $('#lastPageExtreme').mouseup(function () {
         $(this).css('box-shadow', '0 0 50px 5px #e6e6e6');
     });
-    
+
     function lastLogExtreme() {
         if (currentLog < totalLogs) {
             currentLog = totalLogs;
@@ -114,5 +126,5 @@ $(document).ready(function () {
         };
         console.log(currentLog);
     }
-    
+
 });

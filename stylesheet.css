@@ -1,48 +1,56 @@
 /*HTML Tag Styles*/
+
 html {
     margin: 0;
     padding: 0;
 }
+
 body {
     padding: 0;
     margin: 0;
     display: none;
 }
-ul, li {
+
+ul,
+li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-b, p, h1, a {
+
+b,
+p,
+h1,
+a {
     font-family: 'Dosis', sans-serif;
     padding: 0;
     margin: 0;
     color: #000000;
 }
+
 b {
     font-weight: 600
 }
+
 p {
-    font-weight: 300;
-}
-#logText p {
-    margin-bottom: 1em;
-}
-#logText b {
-    color: #6d6d6d;
     font-weight: 300;
 }
 
 
 /*Class & Object Styles*/
+
 .parallax {
     background-color: #000000;
 }
+
 #scene {
     height: 100vh;
     overflow: hidden;
 }
-#parallaxImage1, #parallaxImage2, #parallaxImage3 {
+
+#parallaxImage1,
+#parallaxImage2,
+#parallaxImage3 {
     position: absolute;
     top: -5vh;
     left: -5vw;
@@ -50,13 +58,16 @@ p {
     height: 110vh;
     object-fit: cover;
 }
-#parallaxLogoClosed, #parallaxLogoOpen {
+
+#parallaxLogoClosed,
+#parallaxLogoOpen {
     position: absolute;
     width: 500px;
     left: 50vw;
     margin-left: -250px;
     top: 15vh;
 }
+
 #parallaxLogoText {
     font-size: 65.5px;
     color: #ffffff;
@@ -68,22 +79,26 @@ p {
     padding-top: 550px;
     top: 15vh;
 }
+
 .moreInfo {
     text-align: center;
     height: 40vh;
 }
+
 .infoBox {
     width: 90vw;
     margin: 6vh auto 0;
     /*box-shadow: 0 0 50px 5px #e6e6e6;*/
     text-align: center;
 }
+
 .trailerEmbed {
     width: 80vw;
     height: 45vw;
     max-width: 1500px;
     max-height: 843.75px;
 }
+
 .splash {
     width: 80vw;
     height: auto;
@@ -95,6 +110,7 @@ p {
     box-shadow: 0 0 50px 5px #e6e6e6;
     text-align: center;
 }
+
 #splashImage {
     width: 100%;
     height: 55vh;
@@ -102,8 +118,10 @@ p {
     background-size: cover;
     background-position: center;
 }
+
 @media (max-height: 900px) {
-    #parallaxLogoClosed, #parallaxLogoOpen {
+    #parallaxLogoClosed,
+    #parallaxLogoOpen {
         width: 300px;
         margin-left: -150px;
     }
@@ -115,7 +133,9 @@ p {
     }
 }
 
+
 /*Chart Styles*/
+
 .chart {
     display: inline-block;
     width: 36vw;
@@ -124,10 +144,13 @@ p {
     margin: 2vh 1vw;
     vertical-align: top;
 }
-#preCloud, #postCloud {
+
+#preCloud,
+#postCloud {
     width: 36vw;
     height: 20vw;
 }
+
 @media (max-width: 1100px) {
     .chart {
         display: block;
@@ -135,43 +158,93 @@ p {
         max-height: none;
         margin: 2vh auto;
     }
-    #ratingChart, #opinionChart {
+    #ratingChart,
+    #opinionChart {
         margin: auto auto -4vh;
     }
-    #preCloud, #postCloud {
+    #preCloud,
+    #postCloud {
         display: block;
         width: 100%;
         height: 80%;
     }
 }
 
+
 /*Text Layout*/
-.textBox, .spacer, .footer, .border, .borderFooter {
+
+.textBox,
+.spacer,
+.footer,
+.border,
+.borderFooter {
     padding: 2vh 0 0;
     text-align: center;
     width: 50%;
     margin: auto;
 }
+
 .footer {
     width: 90%;
     font-size: 0.85em;
 }
+
 .border {
     border-bottom: 1px solid #e6e6e6;
 }
+
 .chartTitle {
     text-align: left;
     padding: 1vh 0;
     margin: auto;
 }
+
+
 /*Log Styles & Layout*/
+
+#logText h1 {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #6d6d6d;
+    /*    background-color: #81D4FA;*/
+    font-weight: 300;
+    width: 150px;
+    white-space: nowrap;
+    border-bottom: 1px solid #81D4FA;
+}
+
+#logText h2 {
+    font-family: 'Dosis', sans-serif;
+    color: #6d6d6d;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    width: 50px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#logText p {
+    font-family: 'Dosis', sans-serif;
+    border-left: 1px solid #e6e6e6;
+    padding-left: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
 #logContainer {
     border: 1px solid #e6e6e6;
     width: 50%;
     margin: auto;
-    /*box-shadow: 0 0 50px 5px #e6e6e6;*/
+    /*    box-shadow: 0 0 50px 5px #e6e6e6;*/
     padding: 2vh;
 }
+
 #logText {
     position: relative;
     height: 40vh;
@@ -181,30 +254,37 @@ p {
     text-align: justify;
     padding: 0 2.5% 2.5% 0;
 }
+
 #progressBar {
     margin: 1vh 0;
     position: relative;
     width: 0%;
     height: 1vh;
-    background-color: #90CAF9;
+    background-color: #81D4FA;
 }
+
 #progressBarFill {
     background-color: #e8e8e8;
 }
+
 @media (max-width: 1100px) {
-    .textBox, .spacer, .border, .borderFooter, #logContainer {
+    .textBox,
+    .spacer,
+    .border,
+    .borderFooter,
+    #logContainer {
         width: 80%;
     }
 }
 
+
 /*Buttons*/
+
 .revealButton {
-    /*Position*/
     display: block;
     position: absolute;
     left: 46.5vw;
     bottom: 5vh;
-    /*Design*/
     background: #ffffff;
     opacity: 0.5;
     width: 5vw;
@@ -213,21 +293,28 @@ p {
     padding: 1vw;
     border-radius: 5vw;
 }
+
 .revealButton:hover {
     opacity: 1;
     cursor: pointer;
 }
+
 .graphic {
     padding: 1.8vw 1.5vw;
     width: 2vw;
 }
+
 .infoButton {
     display: inline-block;
     min-width: 100px;
     width: 15vw;
     margin: auto;
 }
-.trailerButton, .dataButton, .logButton, .xButton {
+
+.trailerButton,
+.dataButton,
+.logButton,
+.xButton {
     width: 5vw;
     height: 5vw;
     padding: 1vw;
@@ -235,15 +322,21 @@ p {
     border-radius: 5vw;
     background: #f2f2f2;
 }
-.trailerButton:hover, .dataButton:hover, .logButton:hover, .xButton:hover {
+
+.trailerButton:hover,
+.dataButton:hover,
+.logButton:hover,
+.xButton:hover {
     background: #e6e6e6;
     cursor: pointer;
 }
+
 .graphicInline {
     width: 2vw;
     height: 2vw;
     padding: 1.5vw;
 }
+
 .enterSite {
     display: inline-block;
     height 1vh;
@@ -251,22 +344,27 @@ p {
     padding: 2vh;
     background: #f2f2f2;
 }
+
 .enterSite:hover {
     background: #e6e6e6;
     cursor: pointer;
 }
+
 .hitbox {
     display: inline-block;
     position: relative;
     width: 49%;
     margin: 1vh 0 0;
 }
+
 #hitboxLastPage {
     text-align: left;
 }
+
 #hitboxNextPage {
     text-align: right;
 }
+
 .pageButton {
     position: relative;
     height: 4vw;
@@ -274,21 +372,28 @@ p {
     border-radius: 4vw;
     box-shadow: 0 0 50px 5px #e6e6e6;
 }
+
 .pageButton:hover {
     cursor: pointer;
 }
-#nextPage, #lastPage {
+
+#nextPage,
+#lastPage {
     position: relative;
     margin: 0 1vw;
     z-index: 1;
 }
+
 @media (max-width: 1100px) {
     .pageButton {
         height: 8vh;
         width: 8vh;
         border-radius: 4vh;
     }
-    .trailerButton, .dataButton, .logButton, .xButton {
+    .trailerButton,
+    .dataButton,
+    .logButton,
+    .xButton {
         width: 8vh;
         height: 8vh;
         padding: 0;
