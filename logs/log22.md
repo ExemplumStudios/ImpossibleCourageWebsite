@@ -8,10 +8,6 @@ Finished Alpha v0.1.0, we have a running build of the game, with no crashes. Thi
 
 2 exhibits, fine arts library and thesis presentation
 
-## Testing
-
-## Funding/Business
-
 ## Outreach
 
 Completed a new version of the website, with custom-written JavaScript to flip through all the weekly development logs.

@@ -212,9 +212,9 @@ p {
     color: #6d6d6d;
     /*    background-color: #81D4FA;*/
     font-weight: 300;
-    width: 150px;
+    width: 110px;
     white-space: nowrap;
-    border-bottom: 1px solid #81D4FA;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 #logText h2 {
@@ -256,10 +256,10 @@ p {
 }
 
 #progressBar {
-    margin: 1vh 0;
+    margin: 2vh 0;
     position: relative;
     width: 0%;
-    height: 1vh;
+    height: 0.3vh;
     background-color: #81D4FA;
 }
 
