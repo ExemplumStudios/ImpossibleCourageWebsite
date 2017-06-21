@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var totalLogs = 24;
+    var totalLogs = 25;
     var currentLog = 1;
     var progressPercent = 0;
 
